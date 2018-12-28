@@ -1,4 +1,4 @@
-
+﻿
 
 Android的状态栏由于**第三方厂商的自由发挥**和**国内设计偏向于iOS设计风格**的两大重要原因给Android开发者造成了巨大的困扰。
 
@@ -121,17 +121,11 @@ public class StatusBarUtils {
 如果你使用了系统`titleBar`，当你设置了半透明状态栏之后发现我们的`layout`布局会占据状态栏的空间而`titleBar`的位置却没有改变。这个时候我们只要设置`android:fitsSystemWindows="true"`就可以了，它表示layout不占据状态栏的位置。
 
 设置`android:fitsSystemWindows="true"`之前：
-
-![unnormal_01](C:\Users\ASUS\Desktop\unnormal_01.png)
-
+![unnormal](https://img-blog.csdnimg.cn/20181228102457272.png)
 设置`android:fitsSystemWindows="true"`之后：
-
-![normal_01](C:\Users\ASUS\Desktop\normal_01.png)
-
+![normal](https://img-blog.csdnimg.cn/20181228102517687.png)
 如果你不使用系统的`titleBar`(设置`<item name="windowNoTitle">true</item>`)就不要设置这个属性，如果你设置了也会有问题。
-
-![unnormal](C:\Users\ASUS\Desktop\unnormal.png)
-
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20181228102551631.png)
 这些问题在开发中都是需要注意的。
 
 ***
@@ -168,9 +162,7 @@ public class StatusBarUtils {
 ```
 
 我们需要在不同版本的`values`文件夹下分别建立3个`style`，以适配不同版本的系统。
-
-![chenj001](C:\Users\ASUS\Desktop\chenj001.jpg)
-
+![chenj](https://img-blog.csdnimg.cn/20181228102608850.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MDQ2MzA1,size_16,color_FFFFFF,t_70)
 现在我们将整个布局都占据到了状态栏的空间，如果我们要把状态栏的位置留出来应该怎么办？
 
 我们有三种方案可供选择：
@@ -351,3 +343,4 @@ public class StatusBarUtils {
 
 ***通过`colorPrimaryDark`设置状态栏颜色在`Android5.0`以下也是无效的。***
 
+[博客地址](https://blog.csdn.net/qq_36046305/article/details/85318010)
