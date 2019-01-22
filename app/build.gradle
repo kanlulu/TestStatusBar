@@ -9,16 +9,33 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        release {
+            storeFile file("../common.jks")
+            storePassword "kanlulu123"
+            keyAlias "commonAlias"
+            keyPassword "kanlulu123"
+        }
+        debug {
+            storeFile file("../common.jks")
+            storePassword "kanlulu123"
+            keyAlias "commonAlias"
+            keyPassword "kanlulu123"
+        }
+    }
     buildTypes {
         release {
             buildConfigField("String", "Channel", CHANNEL)
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         debug{
             buildConfigField("String", "Channel", CHANNEL)
             minifyEnabled false
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
