@@ -21,7 +21,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextActivity(View view) {
-        Toast.makeText(this, "CHANNEL：" + BuildConfig.Channel, Toast.LENGTH_LONG).show();
+        if (BuildConfig.DEBUG) {
+            Toast.makeText(this, "debug   --CHANNEL-" + BuildConfig.Channel, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "release --CHANNEL-" + BuildConfig.Channel, Toast.LENGTH_LONG).show();
+        }
 //        Intent intent = new Intent(this, SecondActivity.class);
 //        startActivity(intent);
     }
