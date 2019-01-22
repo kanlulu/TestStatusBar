@@ -11,6 +11,13 @@ android {
     }
     buildTypes {
         release {
+            buildConfigField("String", "Channel", CHANNEL)
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug{
+            buildConfigField("String", "Channel", CHANNEL)
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
