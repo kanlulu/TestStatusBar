@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ChangeStatusBarColor(View view) {
-        StatusBarUtils.setStatusBarBackgroundColor(this, R.color.statusBarColor);
+//        StatusBarUtils.setStatusBarBackgroundColor(this, R.color.statusBarColor);
     }
 
     public void nextActivity(View view) {
